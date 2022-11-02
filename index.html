@@ -15,7 +15,81 @@
   </head>
   <body>
     <div class="container">
-      <h1>hello</h1>
+      <div class="weatherApp">
+        <form id="form-search">
+          <input type="text" id="city" placeholder="Enter a city" />
+          <input type="submit" value="🔍" id="search" />
+          <input type="button" value="Current City" id="cityButton" />
+        </form>
+        <h1>London</h1>
+        <ul>
+          <li id="time"></li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <span class="main-emoji"> 🌧</span>
+            <span id="mainTemp" class="mainTemp">17</span>
+            <a href="#" id="°c"> °C </a> | <a href="#" id="°f"> °F </a>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>Humidity: <span id="humidity">10</span>%</li>
+              <li>Wind: <span id="wind">5</span>mph</li>
+              <li>Description: <span id="description">17</span></li>
+            </ul>
+          </div>
+          <div class="col-2.4">
+            <div class="card-group">
+              <div class="first-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Mon</h5>
+                    <div class="emoji">🌤</div>
+                    <div class="temp">H:18° L:11°</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-2.4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Tue</h5>
+                    <div class="emoji">🌧</div>
+                    <div class="temp">H:17° L:12°</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-2.4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Wed</h5>
+                    <div class="emoji">☁️</div>
+                    <div class="temp">H:19° L:9°</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-2.4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Thu</h5>
+                    <div class="emoji">☁️</div>
+                    <div class="temp">H:19° L:11°</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-2.4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Fri</h5>
+
+                    <div class="emoji">🌧</div>
+                    <div class="temp">H:17° L:11°</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="src/app.js"></script>
   </body>
