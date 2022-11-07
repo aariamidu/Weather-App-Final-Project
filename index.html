@@ -16,7 +16,14 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
+      integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <link rel="stylesheet" href="src/style.css" />
+
     <title>Weather App</title>
   </head>
   <body>
@@ -27,21 +34,23 @@
           <input type="submit" value="🔍" id="search" />
           <input type="button" value="Current City" id="cityButton" />
         </form>
-        <h1>London</h1>
+        <h1 id="city"></h1>
         <ul>
           <li id="time"></li>
         </ul>
         <div class="row">
           <div class="col-6">
-            <span class="main-emoji"> 🌧</span>
-            <span id="mainTemp" class="mainTemp">17</span>
-            <a href="#" id="°c"> °C </a> | <a href="#" id="°f"> °F </a>
+            <div class="overview">
+              <img src="cloudy.png" class="main-emoji" />
+              <strong id="temperature"></strong>
+              <small class="units">°C | <a href="#" id="°f"> °F </a></small>
+            </div>
           </div>
           <div class="col-6">
             <ul>
-              <li>Humidity: <span id="humidity">10</span>%</li>
-              <li>Wind: <span id="wind">5</span>mph</li>
-              <li>Description: <span id="description">17</span></li>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span>mph</li>
+              <li>Description: <span id="description"></span></li>
             </ul>
           </div>
           <div class="col-2.4">

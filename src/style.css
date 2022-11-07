@@ -30,3 +30,34 @@ li {
   margin: 0;
   padding: 0;
 }
+.card {
+  width: fit-content;
+}
+.overview {
+  display: inline;
+  color: #70757a;
+  font-size: 16px;
+  line-height: 20px;
+  list-style: none;
+  font-weight: 150;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+strong {
+  font-size: 40px;
+}
+.units {
+  position: relative;
+  font-size: 16px;
+  top: -18px;
+}
+
+.main-emoji {
+  left: 80px;
+  top: -1px;
+}
+.°f {
+  text-decoration: none;
+  color: #70757a;
+}
