@@ -29,6 +29,9 @@ li {
   text-align: left;
   margin: 0;
   padding: 0;
+}
+
+li:first-letter {
   text-transform: capitalize;
 }
 .card {
@@ -54,7 +57,7 @@ strong {
   top: -18px;
 }
 
-.main-emoji {
+.icon {
   left: 80px;
   top: -1px;
 }
