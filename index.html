@@ -29,8 +29,13 @@
   <body>
     <div class="container">
       <div class="weatherApp">
-        <form id="form-search">
-          <input type="text" id="city" placeholder="Enter a city" />
+        <form id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city"
+            id="city-input"
+            autocomplete="off"
+          />
           <input type="submit" value="🔍" id="search" />
           <input type="button" value="Current City" id="cityButton" />
         </form>
@@ -41,9 +46,12 @@
         <div class="row">
           <div class="col-6">
             <div class="overview">
-              <img src="cloudy.png" class="icon" />
+              <img src="" alt="clear" id="icon" />
               <strong id="temperature"></strong>
-              <small class="units">°C | <a href="#" id="°f"> °F </a></small>
+              <span class="units">
+                <a href="#" id="°c" class="active">°C </a>|
+                <a href="#" id="°f"> °F </a></span
+              >
             </div>
           </div>
           <div class="col-6">
