@@ -64,3 +64,38 @@ strong {
   cursor: default;
   text-decoration: none;
 }
+.card-body {
+  width: 130px;
+  height: 150px;
+  box-shadow: 20px 20px 20px darkgray;
+  text-align: left;
+  line-height: 50px;
+}
+.card-text,
+.temp,
+h5 {
+  text-align: center;
+  color: #70757a;
+  font-family: quantico;
+  font-weight: 300;
+  font-weight: 100;
+}
+.emoji {
+  font-size: 70px;
+  text-align: center;
+}
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #70757a;
+}
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+.weather-forecast-temperature {
+  font-size: 13px;
+}
