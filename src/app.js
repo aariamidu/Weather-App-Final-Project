@@ -32,7 +32,7 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
   let forecastHTML = `<div class="row">`;
-  days.forEach(function (forecastDay, index) {
+  forecast.forEach(function (forecastDay, index) {
     if (index < 5) {
       forecastHTML =
         forecastHTML +
@@ -64,9 +64,8 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
-  let apiKey = "0c085d3ada3bf2ca7752d573067ce72f";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let apiKey = "bc2cd97eaa209e7d22d8f3c84081655f";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 function displayTemperature(response) {
@@ -97,7 +96,7 @@ function displayTemperature(response) {
 }
 
 function search(city) {
-  let apiKey = "0c085d3ada3bf2ca7752d573067ce72f";
+  let apiKey = "bc2cd97eaa209e7d22d8f3c84081655f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
@@ -106,6 +105,22 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
+
+function showPosition(position) {
+  let lat = position.coords.latitude;
+  let log = position.coords.longitude;
+  let apiKey = "bc2cd97eaa209e7d22d8f3c84081655f";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${log}&units=metric&appid=${apiKey}`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function currentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+let currentLocationB = document.querySelector("#cityButton");
+currentLocationB.addEventListener("click", currentLocation);
+
 function toFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
