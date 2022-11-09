@@ -23,8 +23,7 @@
       referrerpolicy="no-referrer"
     ></script>
     <link rel="stylesheet" href="src/style.css" />
-
-    <title>Weather App</title>
+    <title>Nature Forecast</title>
   </head>
   <body>
     <div class="container">
@@ -35,9 +34,15 @@
             placeholder="Enter a city"
             id="city-input"
             autocomplete="off"
+            class="search-box"
           />
-          <input type="submit" value="🔍" id="search" />
-          <input type="button" value="Current City" id="cityButton" />
+          <input type="submit" value="🔍" id="search" class="🔍" />
+          <input
+            type="button"
+            value="Current City"
+            id="cityButton"
+            class="location"
+          />
         </form>
 
         <h1 id="city"></h1>
@@ -63,6 +68,7 @@
         </div>
         <div class="weather-forecast" id="forecast"></div>
       </div>
+
       <div class="github">
         <small>
           Open-source code by Aarifah Amidu
