@@ -121,29 +121,6 @@ function currentLocation(event) {
 let currentLocationB = document.querySelector("#cityButton");
 currentLocationB.addEventListener("click", currentLocation);
 
-function toFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  celcius.classList.remove("active");
-  fahrenheit.classList.add("active");
-  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-let fahrenheit = document.querySelector("#°f");
-fahrenheit.addEventListener("click", toFahrenheit);
-
-function toCelcius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  celcius.classList.add("active");
-  fahrenheit.classList.remove("active");
-  temperatureElement.innerHTML = Math.round(celciusTemperature);
-}
-let celcius = document.querySelector("#°c");
-celcius.addEventListener("click", toCelcius);
-
-let celciusTemperature = null;
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
